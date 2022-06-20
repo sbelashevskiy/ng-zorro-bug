@@ -28,11 +28,22 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.less"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/ng-zorro-antd",
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -101,6 +112,12 @@
             "styles": [
               "src/styles.less"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/ng-zorro-antd",
+                "src/styles"
+              ]
+            },
             "scripts": []
           }
         }
